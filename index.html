@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ALEXANDRA R. KIBILKO | HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="main.js"></script>
+
+    
+<!-- MOBILE MENU -->
+<div class="topnavmobile">
+  <a href="index.html"><img src="Assets/Logo/NoCircle-White.png" alt="Logo"></a>
+  <div id="myLinks">
+    <a href="index.html" class="active"><p>HOME</p></a>
+    <a href="portfolio.html"><p>PORTFOLIO</p></a>
+    <a href="about.html"><p>ABOUT</p></a>
+    <a href="about.html"><p>CONTACT</p></a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+
+<!-- NORMAL MENU-->
+
+</div>
+
+    <div class="navbar">
+        <ul class="nav">
+          <div class="mobile">
+            <li><img src="Assets/Logo/NoCircle-White.png" alt="Logo"></li>
+          </div>
+          <li><a href="index.html" class="current">HOME</a></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><img src="Assets/Logo/NoCircle-White.png" alt="Logo"></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+
+</head>
+<body>
+    <div class="header">
+        <h1>ALEXANDRA R. KIBILKO</h1>
+        <h2>Artist, Designer, Developer</h2>
+    </div>
+
+    <div class="subheader">
+          <!-- Portfolio Gallery Grid -->
+          <div class="row">
+
+            <div class="column 3D">
+                <img src="Assets/3D Modelling/R8.jpg" alt="3D" style="width:100%">
+                <img src="Assets/3D Modelling/RD3.png" alt="3D" style="width:100%">
+                <img src="Assets/3D Modelling/4.jpg" alt="3D" style="width:100%">
+                <img src="Assets/3D Modelling/G4.png" alt="3D" style="width:100%">
+            </div>
+
+
+            <div class="column Il">
+                <img src="Assets/Illustration/S1.png" alt="Il" style="width:100%">
+                <img src="Assets/Illustration/D1.jpg" alt="GD" style="width:100%">     
+                <img src="Assets/Illustration/Ro1.png" alt="GD" style="width:100%">
+                <img src="Assets/GraphicDesign/BitesMockup.png" alt="GD" style="width:100%">
+            </div>
+
+            <div class="column GD">
+                  <img src="Assets/GraphicDesign/ReikiFront.png" alt="GD" style="width:100%">
+                  <img src="Assets/GraphicDesign/MeditationBetter2.png" alt="GD" style="width:100%">
+                  <img src="Assets/GraphicDesign/YogaforBalance2.png" alt="GD" style="width:100%">
+                  <img src="Assets/GraphicDesign/ShakeMockup.png" alt="GD" style="width:100%">
+              </div>
+
+
+          <!-- END GRID -->
+          </div>
+          
+          <!-- END MAIN -->
+          </div>
+          
+          <script>
+          filterSelection("all")
+          function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+              w3RemoveClass(x[i], "show");
+              if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+          }
+          
+          function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+              if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+          }
+          
+          function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+              while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+              }
+            }
+            element.className = arr1.join(" ");
+          }
+          
+          
+          // Add active class to the current button (highlight it)
+          var btnContainer = document.getElementById("myBtnContainer");
+          var btns = btnContainer.getElementsByClassName("btn");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+              var current = document.getElementsByClassName("portactive");
+              current[0].className = current[0].className.replace(" portactive", "");
+              this.className += " portactive";
+            });
+          }
+          </script>
+
+</body>
+</html>
+
+<footer>
+
+  <hr>
+  <br><h3>Alexandra Kibilko</h3>
+  <h4>alexkibilko@agelessentertainment.org</h4>
+  
+
+  <ul>
+    <!-- instagram -->
+    <li>
+      <a href="https://www.instagram.com/agelesskibbles/"
+        ><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+          data-icon="instagram"
+          class="svg-inline--fa fa-instagram fa-w-14"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          ></path>
+        </svg>
+      </a>
+      <p>instagram</p>
+    </li>
+    <!-- github -->
+    <li>
+      <a href="https://www.artstation.com/agelesskibbles"
+        ><svg 
+        version="1.1" 
+        id="Layer_1" 
+        xmlns="http://www.w3.org/2000/svg" 
+        xmlns:xlink="http://www.w3.org/1999/xlink" 
+        x="0px" 
+        y="0px"
+        viewBox="50 -30 110 195.9" >
+     <g>
+       <path 
+       fill="currentColor"
+       class="st0" d="M51.4,123.3l8.9,15.4l0,0c1.8,3.5,5.4,5.9,9.5,5.9l0,0l0,0h59.3l-12.3-21.3H51.4z"/>
+       <path 
+       fill="currentColor"
+       class="st0" d="M157.2,123.4c0-2.1-0.6-4.1-1.7-5.8l-34.8-60.4c-1.8-3.4-5.3-5.7-9.4-5.7H92.9l53.7,93l8.5-14.7
+         C156.7,127,157.2,125.8,157.2,123.4z"/>
+       <polygon 
+       fill="currentColor"
+       class="st0" points="108.1,108.1 84.2,66.6 60.2,108.1 	"/>
+     </g>
+     </svg>
+      </a>
+      <p>ArtStation</p>
+    </li>
+    <!-- linked in -->
+    <li>
+      <a href="https://www.linkedin.com/in/alexandrakibilko/"
+        ><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fab"
+          data-icon="linkedin-in"
+          class="svg-inline--fa fa-linkedin-in fa-w-14"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+          ></path></svg></a>
+          <p>network</p>
+        </li>
+      </ul>
+    </footer>
+
+<!-- PORTFOLIO FORMATTING -->

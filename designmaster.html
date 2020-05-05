@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ALEXANDRA R. KIBILKO | GONK DROID </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="design.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://github.com/processing/p5.js/releases/download/0.6.0/p5.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="main.js"></script>
+
+<!-- Header -->
+
+    <div class="navbar">
+    <ul>
+        <li><button onclick="goBack()"></button></li>
+        <li style="float:right"><img src="Assets/Logo/NoCircle-White.png"></li>
+      </ul>
+    </div>
+
+<!-- End Header -->
+<!-- RETURN TO PREVIOUS FUNCTION-->
+<script>
+    function goBack() {
+      window.history.back()
+    }
+    </script>
+<!--END SCRIPT-------------------->
+</head>
+
+<body>
+
+<div class="main">
+  <div class="grid-container">
+    <div class="item1"><img src="Assets/Illustration/S1.png"></div>
+    <div class="item2"><h1>Gonk Droid</h1></div>
+    <div class="item3">
+      <h3>
+          &nbsp; This project was a personal study in robots and getting to know my software better. It was also a challenge/test for myself to demonstrate my knowledge of the software I wanted to be using.
+          I also wanted to experiment with robots, which is something I don't usually use in my artwork, so it was in a sense a technical challenge for myself.<br>
+          <br>&nbsp; The Gonk Droid was completed in Autodesk Maya, each of the details were separate objects, as I wanted to be able to begin a low poly model and expand to a high quality model. This emulates the
+          type of models used in game development. I create each of my models in low poly at first to have a usable model for game development as it is my focus. After completing the low poly I fleshed out the model into a higher
+          quality model for the final render. <br><br>
+          &nbsp; Rendering and texturing was completed in substance painter.
+      </h3></div>
+    </div>
+
+      <div class="item4">
+        <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="Assets/3D Modelling/G1.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="Assets/3D Modelling/G2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="Assets/3D Modelling/G3.jpg" style="width:100%">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="Assets/3D Modelling/G4.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="Assets/3D Modelling/G5.png" style="width:100%">
+      </div>
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="Assets/3D Modelling/G1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Assets/3D Modelling/G2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Assets/3D Modelling/G3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Assets/3D Modelling/G4a.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="Assets/3D Modelling/G5.png " style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+        </div>    
+      </div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</div>
+
+</body>
+
+
+
+
+</html>
+

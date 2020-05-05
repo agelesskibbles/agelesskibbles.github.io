@@ -1,0 +1,405 @@
+/* Header Section */
+*{transition:all 0.3s ease-in-out;}
+/* -------------------------------------------------------------------------------------------------------------------------------------*/
+/* BEGIN GENERAL FORMATTING */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  }
+head{
+    margin: 10px;
+}
+
+@media screen and (min-width: 801px) {
+    body {
+        font-family: 'Tajawal', sans-serif;
+        background-image: url(Assets/Background/BGSmall.png);
+        background-size: 100vw;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+      
+  }
+
+  @media screen and (max-width: 800px) {
+    body {
+        font-family: 'Tajawal', sans-serif;
+        background-image: url(Assets/Background/BG.png);
+        background-size: 100vw ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+  }
+
+
+
+/* -------- LIST FORMATTING FOR NAVBAR -------- */
+@media screen and (min-width: 801px) {
+  .topnavmobile {
+    display: none;
+  }
+  
+  .topnavmobile #myLinks {
+    display: none;
+  }
+  
+  .topnavmobile p{
+    display: none;
+  }
+  .topnavmobile a {
+    display: none;
+  }
+  
+  .topnavmobile a.icon {
+    display: none;
+  }
+  
+  .topnavmobile a:hover {
+    color: yellow;
+    font-weight: 500;
+  }
+  
+  .topnavmobile a.mobileactive {
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+  }
+  .topnavmobile img {
+    width: 60px;
+    margin: 0;
+  }
+   
+}
+
+@media screen and (min-width: 801px) {
+    .navbar {
+        position:relative;
+        
+    }
+    
+    .nav {
+        position:absolute;
+        top:-80px;
+        margin-left:5vw; /* negative margin equal to half the width */
+        width:100vw;
+        list-style:none;
+        margin-top: 0px;
+    }
+    
+    .nav li {
+        float:left;
+        }
+        
+    .nav a {
+        display:block;
+        text-align:center;
+        width:20vw; /* fixed width */
+        text-decoration:none;
+        margin-top: 20px; 
+        color: whitesmoke;
+        font-size: medium;
+    }
+    
+    .nav a:hover {
+        color: yellow;
+    }
+    
+    .nav a.current {
+        color: rgb(34, 34, 34);
+    }
+    
+    .nav img {
+            width:80px;
+    }
+
+    .nav .mobile img {
+      width: 0px;
+  }
+    .topnavmobile {
+      display: none;
+    }
+      
+  }
+
+  @media screen and (max-width: 800px) {
+    .topnavmobile {
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .topnavmobile #myLinks {
+      display: none;
+    }
+    
+    .topnavmobile p{
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .topnavmobile a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+    
+    .topnavmobile a.icon {
+      background: transparent;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+    
+    .topnavmobile a:hover {
+      color: yellow;
+      font-weight: 500;
+    }
+    
+    .topnavmobile a.active {
+      color: black;
+      font-weight: bold;
+    }
+    .topnavmobile img {
+      width: 60px;
+      margin: 0;
+    }
+     
+    .nav {
+      display: none;
+    }
+
+    .navbar {
+      display: none;
+    }
+
+    
+  }
+
+
+/* -------- FORMATTING FOR HEADER -------- */
+
+@media screen and (min-width: 801px) {
+
+  .header {
+      margin-top: 110px;
+      background-color: none;
+      float: center;
+      width: 100vw;
+      padding-top:175px;
+      padding-bottom:305px;
+      padding-left: 25px;
+      padding-right: 25px;
+  }
+  
+  .header h1 {
+      font-size: 3em;
+      font-weight: 300;
+      text-align: center;
+      float: center;
+      color: white;
+  }
+  
+  .header h2 {
+      padding-top: 0px;
+      padding-bottom: 17px;
+      font-size: 1.8em;
+      color: whitesmoke;
+      text-align: center;
+      font-weight: 200;
+  
+  }
+  
+    
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    margin-top: px;
+    background-color: none;
+    float: center;
+    width: 100vw;
+    padding-top:175px;
+    padding-bottom:305px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header h1 {
+    font-size: 8vw;
+    font-weight: 300;
+    text-align: center;
+    float: center;
+    color: white;
+}
+
+.header h2 {
+    padding-top: 0px;
+    padding-bottom: 17px;
+    font-size: 5vw;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 200;
+
+}
+
+}
+
+
+
+/* -------- FORMATTING FOR SUBHEADER -------- */
+
+.subheader {
+    background-image: url(Assets/Background/ContentBG.png);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding:50px;
+    color: rgb(68, 68, 68);
+}
+.subheader h1 {
+    font-weight: 300;
+}
+
+.subheader h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+/* -------- IMAGE GRID FORMATTING --------- */
+.row {
+    margin: 10px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+
+  .contentbtn{
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: rgb(245, 96, 96);
+    cursor: pointer;
+    left:50%;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 6px rgb(219, 64, 64);
+  }
+
+  .contentbtn:hover {
+    background-color: rgb(247, 125, 125);
+    color: black;
+    box-shadow: 0 3px rgb(245, 96, 96);
+    transform: translateY(5px);
+  }
+  .contentbtn h4{
+    font-size: 14px;
+    color: white;
+  }
+
+  .contentbtn h5{
+    font-size: 12px;
+    padding-top: 3px;
+    color: white;
+    font-style: italic;
+  }
+
+  .contentbtn:hover h4{
+    color: rgb(219, 64, 64);
+  }  
+
+  .contentbtn:hover h5{
+    color: rgb(219, 64, 64);
+  }  
+
+
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #ddd;
+    cursor: pointer;
+    left:50%;
+    box-shadow: 0 6px rgb(143, 143, 143);
+  }
+  
+  .btn:hover {
+    background-color: #838383;
+    color: black;
+    box-shadow: 0 3px rgb(143, 143, 143);
+    transform: translateY(3px);
+  }
+  
+  .btn.portactive {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: rgb(255, 199, 79);
+    cursor: pointer;
+    left:50%;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 3px rgb(235, 160, 0);
+    transform: translateY(3px);
+  }
+
+  @media screen and (max-width: 800px) {
+    .column {
+        float: center;
+        width: 100%;
+  
+      }
+      
+  }
+  
+  @media screen and (min-width: 801px) {
+    .column {
+        float: left;
+        width: 33%;
+         /* Hide all elements by default */
+      }
+      
+  }

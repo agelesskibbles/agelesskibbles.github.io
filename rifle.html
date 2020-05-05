@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ALEXANDRA R. KIBILKO | MANDO RIFLE </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="project.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://github.com/processing/p5.js/releases/download/0.6.0/p5.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="main.js"></script>
+
+<!-- Header -->
+
+    <div class="navbar">
+    <ul>
+        <li><button onclick="goBack()"></button></li>
+        <li style="float:right"><img src="Assets/Logo/NoCircle-White.png"></li>
+      </ul>
+    </div>
+
+<!-- End Header -->
+<!-- RETURN TO PREVIOUS FUNCTION-->
+<script>
+    function goBack() {
+      window.history.back()
+    }
+    </script>
+<!--END SCRIPT-------------------->
+</head>
+
+<body>
+
+<div class="main">
+
+<div class="grid-container">
+  <div class="item1">
+	  <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="Assets/3D Modelling/R1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="Assets/3D Modelling/R2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="Assets/3D Modelling/R3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="Assets/3D Modelling/R6.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="Assets/3D Modelling/R8.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Assets/3D Modelling/R1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Assets/3D Modelling/R2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Assets/3D Modelling/R3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Assets/3D Modelling/R6.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Assets/3D Modelling/R8.jpg " style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+
+  </div>
+</div>
+  </div>  
+  <div class="item2"><h1>Mandalorian Rifle</h1></div>
+  <div class="item3">
+    <div class="apps">
+    <ul>
+        <li><img src="Assets/maya.png"></li>
+        <li>Autodesk Maya</li>
+        <li><img src="Assets/sub.png"></li>
+        <li>Substance Painter</li>
+    </ul></div></div>
+  <div class="item4">
+    <h3>
+        &nbsp; This was a quick project to refresh myself of my 3D modelling knowledge and I gave myself a short, 4 hour time limit to see what I could do in a fraction of the time I normally take to complete a project.<br>
+        <br>&nbsp; The 3D model was completed as a low-poly model due to the time restraints, as well as the fact that my modelling skills are also to be applied to game development, meaning a low-poly model is neccessary 
+        for the game to be optimized and function properly. This model was also divided into three separate parts; the barrell, base, and accessories.<br><br>
+        &nbsp; The texturing for this model was basic due to the time restraint as well. So I used simple metal textures in substance painter and created a more personalized
+        <em>Mandalorian Rifle</em> from the <i>Star Wars</i> series. Rendering was completed in Substance Painter as well.
+    </h3></div>
+  <div class="item5">
+      <h3>
+          <b>Timeline:</b> <em>4 hours</em><br>
+          <b>Prior Experience:</b> <em>Basic 3D modelling experience, One time experience in UV mapping, texturing, and rendering</em><br>
+          <b>Project Purpose:</b> <em>Personal Study, Game Art Model</em>
+      </h3>
+  </div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+</div>
+
+
+
+</body>
+</html>
+
+<footer>
+
+<hr>
+<br><h3>Alexandra Kibilko</h3>
+<h4>alexkibilko@agelessentertainment.org</h4>
+
+
+<ul>
+  <!-- instagram -->
+  <li>
+    <a href="https://www.instagram.com/agelesskibbles/"
+      ><svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fab"
+        data-icon="instagram"
+        class="svg-inline--fa fa-instagram fa-w-14"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+        ></path>
+      </svg>
+    </a>
+    <p>instagram</p>
+  </li>
+  <!-- github -->
+  <li>
+    <a href="https://www.artstation.com/agelesskibbles"
+      ><svg 
+      version="1.1" 
+      id="Layer_1" 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" 
+      x="0px" 
+      y="0px"
+      viewBox="50 -30 110 195.9" >
+   <g>
+     <path 
+     fill="currentColor"
+     class="st0" d="M51.4,123.3l8.9,15.4l0,0c1.8,3.5,5.4,5.9,9.5,5.9l0,0l0,0h59.3l-12.3-21.3H51.4z"/>
+     <path 
+     fill="currentColor"
+     class="st0" d="M157.2,123.4c0-2.1-0.6-4.1-1.7-5.8l-34.8-60.4c-1.8-3.4-5.3-5.7-9.4-5.7H92.9l53.7,93l8.5-14.7
+       C156.7,127,157.2,125.8,157.2,123.4z"/>
+     <polygon 
+     fill="currentColor"
+     class="st0" points="108.1,108.1 84.2,66.6 60.2,108.1 	"/>
+   </g>
+   </svg>
+    </a>
+    <p>ArtStation</p>
+  </li>
+  <!-- linked in -->
+  <li>
+    <a href="https://www.linkedin.com/in/alexandrakibilko/"
+      ><svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fab"
+        data-icon="linkedin-in"
+        class="svg-inline--fa fa-linkedin-in fa-w-14"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+        ></path></svg></a>
+        <p>network</p>
+      </li>
+    </ul>
+  </footer>
+</body>
